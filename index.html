@@ -1,0 +1,1154 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The White House Kakamega | Boutique Resort & Private Guesthouse</title>
+    <meta name="description" content="Experience serene boutique comfort at The White House Kakamega. Private gated suites, modern lounges, and lush tranquility on Kisumu-Kakamega Road, Kakamega.">
+
+    <!-- Google Fonts: Cormorant Garamond (Editorial Luxury) & Plus Jakarta Sans (Clean Modern Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        alabaster: '#FAF9F6',
+                        sandstone: '#F3EFEA',
+                        emerald: {
+                            deep: '#1B3B2B',
+                            rich: '#142C20',
+                            muted: '#2C5440'
+                        },
+                        gold: {
+                            warm: '#B8935A',
+                            light: '#D4B483',
+                            dark: '#967441'
+                        },
+                        charcoal: '#1E2421'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles & Subtle Animations -->
+    <style>
+        body {
+            background-color: #FAF9F6;
+            color: #1E2421;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Navigation */
+        .glass-nav {
+            background: rgba(250, 249, 246, 0.88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(184, 147, 90, 0.2);
+        }
+
+        /* Hero Overlay Gradient */
+        .hero-overlay {
+            background: linear-gradient(
+                to bottom,
+                rgba(20, 44, 32, 0.65) 0%,
+                rgba(20, 44, 32, 0.45) 50%,
+                rgba(20, 44, 32, 0.85) 100%
+            );
+        }
+
+        /* Scroll Reveal Utility */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth Image Hover Zoom */
+        .img-zoom-container {
+            overflow: hidden;
+        }
+        .img-zoom {
+            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .img-zoom-container:hover .img-zoom {
+            transform: scale(1.06);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF9F6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #B8935A;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-emerald-deep selection:text-white">
+
+    <!-- ==================== STICKY NAVIGATION ==================== -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-full bg-emerald-deep flex items-center justify-center border border-gold-warm/60 shadow-sm group-hover:scale-105 transition-transform">
+                        <svg class="w-5 h-5 text-gold-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-emerald-deep block leading-none">The White House</span>
+                        <span class="text-[11px] uppercase tracking-[0.25em] text-gold-dark font-semibold block mt-0.5">Kakamega Retreat</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-charcoal/80">
+                    <a href="#about" class="hover:text-emerald-deep transition-colors py-2">The Retreat</a>
+                    <a href="#suites" class="hover:text-emerald-deep transition-colors py-2">Suites & Lounges</a>
+                    <a href="#dining" class="hover:text-emerald-deep transition-colors py-2">Dining Bar</a>
+                    <a href="#amenities" class="hover:text-emerald-deep transition-colors py-2">Amenities</a>
+                    <a href="#gallery" class="hover:text-emerald-deep transition-colors py-2">Gallery</a>
+                    <a href="#location" class="hover:text-emerald-deep transition-colors py-2">Location</a>
+                </nav>
+
+                <!-- Desktop CTA Buttons -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="tel:+254711112481" class="text-xs font-semibold text-emerald-deep hover:text-gold-dark transition-colors flex items-center gap-1.5 px-3 py-2 rounded-full border border-emerald-deep/15">
+                        <svg class="w-3.5 h-3.5 text-gold-warm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        0711 112 481
+                    </a>
+                    <button onclick="scrollToBooking('Executive Suite Stay')" class="bg-emerald-deep hover:bg-emerald-rich text-white text-xs font-semibold uppercase tracking-wider px-5 py-3 rounded-full shadow-md hover:shadow-lg transition-all">
+                        Reserve Stay
+                    </button>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl text-emerald-deep hover:bg-emerald-deep/5 transition-colors">
+                    <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-alabaster border-t border-gold-warm/20 px-4 pt-4 pb-6 shadow-xl">
+            <div class="flex flex-col space-y-3 text-base font-medium text-charcoal">
+                <a href="#about" class="mobile-link py-2 px-3 rounded-xl hover:bg-sandstone">The Retreat</a>
+                <a href="#suites" class="mobile-link py-2 px-3 rounded-xl hover:bg-sandstone">Suites & Living Spaces</a>
+                <a href="#dining" class="mobile-link py-2 px-3 rounded-xl hover:bg-sandstone">Dining & Kitchen</a>
+                <a href="#amenities" class="mobile-link py-2 px-3 rounded-xl hover:bg-sandstone">Amenities</a>
+                <a href="#gallery" class="mobile-link py-2 px-3 rounded-xl hover:bg-sandstone">Photo Gallery</a>
+                <a href="#location" class="mobile-link py-2 px-3 rounded-xl hover:bg-sandstone">Location & Map</a>
+                <div class="pt-3 border-t border-gold-warm/20 flex flex-col gap-3">
+                    <a href="tel:+254711112481" class="w-full text-center py-3 rounded-full border border-emerald-deep text-emerald-deep font-semibold text-sm">
+                        Call +254 711 112 481
+                    </a>
+                    <button onclick="scrollToBooking('Boutique Stay Inquiry'); toggleMobileMenu();" class="w-full py-3 rounded-full bg-emerald-deep text-white font-semibold text-sm shadow-md">
+                        Book via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== FULL-BLEED HERO SECTION ==================== -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden">
+        <!-- Hero Background Image (Image 1: hero-lounge.jpg) -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="images/hero-lounge.jpg" 
+                alt="The White House Kakamega Warm Tufted Lounge & Timber Ceiling" 
+                class="w-full h-full object-cover object-center scale-105 animate-[pulse_20s_ease-in-out_infinite]"
+                onerror="this.onerror=null; this.src='https://placehold.co/1600x1000/1B3B2B/FAF9F6?text=images/hero-lounge.jpg+(Main+Warm+Lounge)';"
+            >
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 lg:py-20">
+            <div class="max-w-3xl">
+                <!-- Location Eyebrow Pill -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-alabaster text-xs font-medium tracking-widest uppercase mb-6">
+                    <span class="w-2 h-2 rounded-full bg-gold-light animate-pulse"></span>
+                    Amalemba • Kisumu-Kakamega Road, Kakamega
+                </div>
+
+                <!-- Main Editorial Headline -->
+                <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-semibold text-white leading-[1.08] tracking-tight mb-6">
+                    Private Boutique Serenity in the Heart of <span class="italic text-gold-light">Kakamega.</span>
+                </h1>
+
+                <p class="text-base sm:text-lg text-alabaster/90 font-light leading-relaxed max-w-2xl mb-10">
+                    Step behind our gated leafy sanctuary into warm timber-ceilinged lounges, plush contemporary suites, and tailored Western Kenyan hospitality—minutes from Kakamega Town and the ancient rainforest.
+                </p>
+
+                <!-- Quick Hero Actions -->
+                <div class="flex flex-wrap items-center gap-4 mb-12">
+                    <button onclick="scrollToBooking('Full Retreat / Suite Reservation')" class="px-8 py-4 rounded-full bg-gold-warm hover:bg-gold-dark text-white font-semibold text-sm tracking-wide shadow-xl hover:shadow-2xl transition-all flex items-center gap-2">
+                        <span>Check Availability</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </button>
+                    <a href="#suites" class="px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-medium text-sm tracking-wide transition-all">
+                        Explore Suites & Lounges
+                    </a>
+                </div>
+            </div>
+
+            <!-- Floating Quick-Booking Bar -->
+            <div class="bg-alabaster/95 backdrop-blur-xl rounded-3xl p-4 sm:p-6 shadow-2xl border border-gold-warm/30 max-w-5xl">
+                <form id="hero-quick-book" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase tracking-wider text-emerald-deep/70 mb-1.5">Check-In Date</label>
+                        <input type="date" id="hero-checkin" required class="w-full px-4 py-3 rounded-2xl bg-sandstone/80 border border-emerald-deep/10 text-sm font-medium text-charcoal focus:outline-none focus:border-gold-warm">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase tracking-wider text-emerald-deep/70 mb-1.5">Check-Out Date</label>
+                        <input type="date" id="hero-checkout" required class="w-full px-4 py-3 rounded-2xl bg-sandstone/80 border border-emerald-deep/10 text-sm font-medium text-charcoal focus:outline-none focus:border-gold-warm">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase tracking-wider text-emerald-deep/70 mb-1.5">Accommodation Type</label>
+                        <select id="hero-room" class="w-full px-4 py-3 rounded-2xl bg-sandstone/80 border border-emerald-deep/10 text-sm font-medium text-charcoal focus:outline-none focus:border-gold-warm">
+                            <option value="Executive Lounge & Suite">Executive Lounge & Suite</option>
+                            <option value="Family / Twin Bunk Suite">Family / Twin Bunk Suite</option>
+                            <option value="Entire Private Guesthouse">Entire Private Guesthouse</option>
+                            <option value="Weekend / Business Retreat">Weekend / Business Retreat</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full py-3.5 px-6 rounded-2xl bg-emerald-deep hover:bg-emerald-rich text-white font-semibold text-sm shadow-lg transition-all flex items-center justify-center gap-2">
+                        <span>Instant WhatsApp Quote</span>
+                        <svg class="w-4 h-4 text-gold-light" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT THE RETREAT & COMPOUND ==================== -->
+    <section id="about" class="py-20 lg:py-28 bg-alabaster">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                <!-- Left Image Composition (Image 2: exterior-gate.jpg + Image 4: living-room-wide.jpg) -->
+                <div class="lg:col-span-6 reveal">
+                    <div class="relative">
+                        <!-- Main Compound Gate Photo -->
+                        <div class="img-zoom-container rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] sm:aspect-[4/4]">
+                            <img 
+                                src="images/exterior-gate.jpg" 
+                                alt="Private Gated Entrance surrounded by tall trees at The White House Kakamega" 
+                                class="img-zoom w-full h-full object-cover"
+                                onerror="this.onerror=null; this.src='https://placehold.co/800x900/1B3B2B/FAF9F6?text=images/exterior-gate.jpg+(Leafy+Gated+Entrance)';"
+                            >
+                        </div>
+
+                        <!-- Overlapping Accent Card with Wide Lounge Photo -->
+                        <div class="hidden sm:block absolute -bottom-8 -right-6 w-64 rounded-2xl overflow-hidden shadow-2xl border-4 border-alabaster bg-white">
+                            <img 
+                                src="images/living-room-wide.jpg" 
+                                alt="Wide Interior View of Main Lounge" 
+                                class="w-full h-40 object-cover"
+                                onerror="this.onerror=null; this.src='https://placehold.co/400x260/B8935A/FAF9F6?text=images/living-room-wide.jpg';"
+                            >
+                            <div class="p-3.5 bg-emerald-deep text-white">
+                                <p class="font-serif text-base font-semibold text-gold-light">Gated Tranquility</p>
+                                <p class="text-xs text-alabaster/80">24/7 private compound & secure parking</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Editorial Story -->
+                <div class="lg:col-span-6 reveal">
+                    <span class="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark block mb-3">Welcome to Kakamega</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-semibold text-emerald-deep leading-tight mb-6">
+                        A Secluded Sanctuary Built for Rest, Warmth & Privacy.
+                    </h2>
+                    <p class="text-charcoal/80 text-base sm:text-lg leading-relaxed mb-6">
+                        Tucked along a peaceful, tree-lined access road off the Kisumu-Kakamega Highway in Amalemba, <strong>The White House Kakamega</strong> blends residential privacy with boutique hotel polish. Whether you are visiting Western Kenya for business, family gatherings, or an expedition into the Kakamega Rainforest, our gated retreat offers a tranquil home away from home.
+                    </p>
+                    <p class="text-charcoal/75 text-base leading-relaxed mb-8">
+                        Inside our secure perimeter walls, guests enjoy thoughtfully curated living lounges, natural timber-clad ceilings, custom upholstered seating, and modern self-catering dining facilities—all just minutes from Kakamega's vibrant town center.
+                    </p>
+
+                    <!-- Key Distance & Landmark Highlights -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-gold-warm/25">
+                        <div class="p-4 rounded-2xl bg-sandstone/70 border border-gold-warm/15">
+                            <span class="font-serif text-2xl font-bold text-emerald-deep block">2.4 km</span>
+                            <span class="text-xs font-medium text-charcoal/70">To Kakamega Town & Muliro Gardens</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-sandstone/70 border border-gold-warm/15">
+                            <span class="font-serif text-2xl font-bold text-emerald-deep block">3.1 km</span>
+                            <span class="text-xs font-medium text-charcoal/70">To Kakamega Airstrip / Airport</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-sandstone/70 border border-gold-warm/15">
+                            <span class="font-serif text-2xl font-bold text-emerald-deep block">100%</span>
+                            <span class="text-xs font-medium text-charcoal/70">Private Gated Security & Parking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SUITES & LIVING SPACES ==================== -->
+    <section id="suites" class="py-20 lg:py-28 bg-sandstone/60 border-y border-gold-warm/15">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark block mb-3">Accommodations & Lounges</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-semibold text-emerald-deep mb-4">
+                    Curated Spaces for Every Traveler
+                </h2>
+                <p class="text-charcoal/75 text-base sm:text-lg">
+                    From plush executive lounges to crisp, serene sleeping quarters, every room is designed with warm textures and thoughtful details.
+                </p>
+            </div>
+
+            <!-- 3-Column Feature Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Heritage Warm Lounge & Living Suite (Image 4: living-room-wide.jpg) -->
+                <div class="bg-alabaster rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-gold-warm/20 flex flex-col reveal">
+                    <div class="img-zoom-container h-64 relative">
+                        <img 
+                            src="images/living-room-wide.jpg" 
+                            alt="Heritage Timber & Cream Tufted Lounge" 
+                            class="img-zoom w-full h-full object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/800x600/1B3B2B/FAF9F6?text=images/living-room-wide.jpg+(Warm+Main+Lounge)';"
+                        >
+                        <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full bg-emerald-deep/90 backdrop-blur-md text-gold-light text-xs font-semibold">
+                            Signature Living
+                        </span>
+                    </div>
+                    <div class="p-7 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-emerald-deep mb-2">The Heritage Timber Lounge</h3>
+                            <p class="text-sm text-charcoal/75 leading-relaxed mb-5">
+                                Anchored by rich natural wood-paneled ceilings, cream tufted Chesterfield seating, sheer golden drapes, and a wall-mounted Smart TV with cozy ambient fireplace visuals.
+                            </p>
+                            <ul class="space-y-2 text-xs font-medium text-charcoal/80 mb-6">
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-gold-warm"></span> Wall-mounted Smart TV & High-Speed Wi-Fi
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-gold-warm"></span> Plush Cream Tufted Sofa Suite
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-gold-warm"></span> Direct Access to Granite Dining Counter
+                                </li>
+                            </ul>
+                        </div>
+                        <button onclick="scrollToBooking('Heritage Timber Lounge & Suite')" class="w-full py-3 rounded-2xl border border-emerald-deep text-emerald-deep hover:bg-emerald-deep hover:text-white font-semibold text-xs uppercase tracking-wider transition-colors">
+                            Inquire About This Space
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Royal Navy Executive Lounge (Image 7: modern-lounge-blue.jpg) -->
+                <div class="bg-alabaster rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-gold-warm/20 flex flex-col reveal">
+                    <div class="img-zoom-container h-64 relative">
+                        <img 
+                            src="images/modern-lounge-blue.jpg" 
+                            alt="Royal Navy Channel-Tufted Modern Lounge" 
+                            class="img-zoom w-full h-full object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/800x600/1E293B/FAF9F6?text=images/modern-lounge-blue.jpg+(Navy+Executive+Lounge)';"
+                        >
+                        <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full bg-gold-warm text-white text-xs font-semibold">
+                            Executive Wing
+                        </span>
+                    </div>
+                    <div class="p-7 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-emerald-deep mb-2">The Sapphire Velvet Lounge</h3>
+                            <p class="text-sm text-charcoal/75 leading-relaxed mb-5">
+                                A contemporary private sitting lounge featuring an oversized navy-blue channel-tufted sectional sofa, sculptural geometric coffee table, and serene daylight filtering through tailored blue drapes.
+                            </p>
+                            <ul class="space-y-2 text-xs font-medium text-charcoal/80 mb-6">
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-gold-warm"></span> Deep Channel-Tufted Navy Sectional
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-gold-warm"></span> Ideal for Private Meetings & Relaxation
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-gold-warm"></span> Polished Porcelain Tile Flooring
+                                </li>
+                            </ul>
+                        </div>
+                        <button onclick="scrollToBooking('Sapphire Velvet Executive Suite')" class="w-full py-3 rounded-2xl bg-emerald-deep text-white hover:bg-emerald-rich font-semibold text-xs uppercase tracking-wider transition-colors shadow-sm">
+                            Book Executive Stay
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Family & Twin Bunk Bedroom (Image 5: bedroom-bunk.jpg) -->
+                <div class="bg-alabaster rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-gold-warm/20 flex flex-col reveal">
+                    <div class="img-zoom-container h-64 relative">
+                        <img 
+                            src="images/bedroom-bunk.jpg" 
+                            alt="Crisp White Linen Twin Bunk Bedroom" 
+                            class="img-zoom w-full h-full object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/800x600/2C5440/FAF9F6?text=images/bedroom-bunk.jpg+(Family+%26+Twin+Bedroom)';"
+                        >
+                        <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full bg-emerald-deep/90 backdrop-blur-md text-gold-light text-xs font-semibold">
+                            Family & Group Friendly
+                        </span>
+                    </div>
+                    <div class="p-7 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-emerald-deep mb-2">The Canopy Twin & Family Room</h3>
+                            <p class="text-sm text-charcoal/75 leading-relaxed mb-5">
+                                Thoughtfully appointed sleeping quarters featuring a handcrafted dark timber and wrought-iron bunk bed dressed in crisp white hotel-grade duvets, plush pillows, and warm blackout curtains.
+                            </p>
+                            <ul class="space-y-2 text-xs font-medium text-charcoal/80 mb-6">
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-gold-warm"></span> Crisp Hotel-Grade White Linens & Duvets
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-gold-warm"></span> Timber Ceiling & Warm Natural Lighting
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-gold-warm"></span> Great for Families, Friends & Retreats
+                                </li>
+                            </ul>
+                        </div>
+                        <button onclick="scrollToBooking('Family / Twin Bunk Suite')" class="w-full py-3 rounded-2xl border border-emerald-deep text-emerald-deep hover:bg-emerald-deep hover:text-white font-semibold text-xs uppercase tracking-wider transition-colors">
+                            Reserve Family Room
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CULINARY & BREAKFAST BAR EXPERIENCE ==================== -->
+    <section id="dining" class="py-20 lg:py-28 bg-emerald-deep text-alabaster relative overflow-hidden">
+        <!-- Subtle Decorative Pattern -->
+        <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(#D4B483 1px, transparent 1px); background-size: 28px 28px;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Column -->
+                <div class="lg:col-span-5 reveal">
+                    <span class="text-xs font-bold uppercase tracking-[0.25em] text-gold-light block mb-3">Dining & Self-Catering</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-semibold text-white leading-tight mb-6">
+                        Bespoke Granite Dining & Morning Coffee Bar
+                    </h2>
+                    <p class="text-alabaster/80 text-base leading-relaxed mb-6">
+                        Start your Kakamega mornings with fresh Kenyan tea or brewed coffee at our polished black granite breakfast counter. Styled with designer houndstooth gold-legged bar stools, warm amber accent chairs, and gold-rimmed tableware, our kitchen and dining space invites effortless meals and conversation.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-8 h-8 rounded-full bg-gold-warm/20 border border-gold-warm/40 flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-4 h-4 text-gold-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white text-sm">Polished Black Granite Countertop</h4>
+                                <p class="text-xs text-alabaster/70">Spacious social dining bar with designer seating and curated crockery.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-8 h-8 rounded-full bg-gold-warm/20 border border-gold-warm/40 flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-4 h-4 text-gold-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white text-sm">Modern Kitchen Appliances & Tableware</h4>
+                                <p class="text-xs text-alabaster/70">Equipped with microwave, fine dining bowls, cutlery, and refreshment station.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="scrollToBooking('Stay with Breakfast / Kitchen Access')" class="px-7 py-3.5 rounded-full bg-gold-warm hover:bg-gold-dark text-white font-semibold text-xs uppercase tracking-wider transition-all shadow-lg">
+                        Plan Your Stay
+                    </button>
+                </div>
+
+                <!-- Dual Dining Image Grid (Image 3: dining-bar-1.jpg & Image 6: dining-bar-2.jpg) -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 reveal">
+                    <div class="img-zoom-container rounded-3xl overflow-hidden shadow-2xl border-2 border-gold-warm/30 aspect-[4/5]">
+                        <img 
+                            src="images/dining-bar-1.jpg" 
+                            alt="Houndstooth Bar Stools & Granite Dining Counter" 
+                            class="img-zoom w-full h-full object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/700x850/142C20/FAF9F6?text=images/dining-bar-1.jpg+(Granite+Breakfast+Bar)';"
+                        >
+                    </div>
+                    <div class="img-zoom-container rounded-3xl overflow-hidden shadow-2xl border-2 border-gold-warm/30 aspect-[4/5] sm:mt-8">
+                        <img 
+                            src="images/dining-bar-2.jpg" 
+                            alt="Gold-rimmed Tableware & Warm Accent Dining Chairs" 
+                            class="img-zoom w-full h-full object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/700x850/142C20/FAF9F6?text=images/dining-bar-2.jpg+(Fine+Table+Setting)';"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== AMENITIES & HOSPITALITY ==================== -->
+    <section id="amenities" class="py-20 lg:py-28 bg-alabaster">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark block mb-3">Guest Comforts</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-semibold text-emerald-deep mb-4">
+                    Everything Needed for an Effortless Stay
+                </h2>
+                <p class="text-charcoal/75 text-base">
+                    Thoughtful modern conveniences paired with the peace and privacy of a walled residential estate.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+                <!-- Amenity 1 -->
+                <div class="p-7 rounded-3xl bg-white border border-gold-warm/20 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-deep/10 text-emerald-deep flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-emerald-deep mb-2">Complimentary High-Speed Wi-Fi</h3>
+                    <p class="text-sm text-charcoal/70 leading-relaxed">Reliable fiber internet across all lounges and bedrooms for remote work, streaming, and seamless connectivity.</p>
+                </div>
+
+                <!-- Amenity 2 -->
+                <div class="p-7 rounded-3xl bg-white border border-gold-warm/20 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-deep/10 text-emerald-deep flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-emerald-deep mb-2">24/7 Gated Security & Free Parking</h3>
+                    <p class="text-sm text-charcoal/70 leading-relaxed">Enclosed perimeter wall, solid steel entrance gate, and ample secure private parking inside the compound.</p>
+                </div>
+
+                <!-- Amenity 3 -->
+                <div class="p-7 rounded-3xl bg-white border border-gold-warm/20 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-deep/10 text-emerald-deep flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-emerald-deep mb-2">Smart TV & Lounge Entertainment</h3>
+                    <p class="text-sm text-charcoal/70 leading-relaxed">Wall-mounted flat-screen Smart TVs with streaming apps and warm ambient lighting for relaxing evenings.</p>
+                </div>
+
+                <!-- Amenity 4 -->
+                <div class="p-7 rounded-3xl bg-white border border-gold-warm/20 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-deep/10 text-emerald-deep flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-emerald-deep mb-2">Granite Dining Bar & Kitchenette</h3>
+                    <p class="text-sm text-charcoal/70 leading-relaxed">Elegant breakfast island with designer bar seating, microwave, kettle, and curated tableware for self-catering ease.</p>
+                </div>
+
+                <!-- Amenity 5 -->
+                <div class="p-7 rounded-3xl bg-white border border-gold-warm/20 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-deep/10 text-emerald-deep flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-emerald-deep mb-2">Hotel-Grade Linens & Housekeeping</h3>
+                    <p class="text-sm text-charcoal/70 leading-relaxed">Freshly pressed white cotton sheets, plush duvets, clean towels, and attentive local housekeeping upon request.</p>
+                </div>
+
+                <!-- Amenity 6 -->
+                <div class="p-7 rounded-3xl bg-white border border-gold-warm/20 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-deep/10 text-emerald-deep flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-emerald-deep mb-2">Prime Amalemba Access</h3>
+                    <p class="text-sm text-charcoal/70 leading-relaxed">Peaceful residential neighborhood with rapid access to Kisumu-Kakamega Road, Bukhungu Stadium, and Kakamega Forest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INTERACTIVE PHOTO GALLERY ==================== -->
+    <section id="gallery" class="py-20 lg:py-28 bg-sandstone/70 border-t border-gold-warm/15">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 reveal">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark block mb-3">Visual Tour</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-semibold text-emerald-deep">
+                        Inside The White House
+                    </h2>
+                </div>
+
+                <!-- Gallery Filter Tabs -->
+                <div class="flex flex-wrap gap-2" id="gallery-filters">
+                    <button data-filter="all" class="filter-btn active px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-emerald-deep text-white transition-all">
+                        All Photos (8)
+                    </button>
+                    <button data-filter="lounges" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-white text-charcoal hover:bg-emerald-deep/10 transition-all">
+                        Living Lounges
+                    </button>
+                    <button data-filter="dining" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-white text-charcoal hover:bg-emerald-deep/10 transition-all">
+                        Dining & Kitchen
+                    </button>
+                    <button data-filter="rooms" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-white text-charcoal hover:bg-emerald-deep/10 transition-all">
+                        Bedrooms & Grounds
+                    </button>
+                </div>
+            </div>
+
+            <!-- 8-Image Responsive Masonry/Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" id="gallery-grid">
+                <!-- Gallery Item 1: hero-lounge.jpg -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer aspect-[4/3] bg-emerald-deep" data-category="lounges" onclick="openLightbox(0)">
+                    <img src="images/hero-lounge.jpg" alt="Main Cream Tufted Lounge & Smart TV" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x450/1B3B2B/FAF9F6?text=images/hero-lounge.jpg';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <div>
+                            <span class="text-[10px] uppercase tracking-widest text-gold-light block">Living Lounge</span>
+                            <p class="text-white text-sm font-medium">Timber-Ceiling Main Lounge</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2: dining-bar-1.jpg -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer aspect-[4/3] bg-emerald-deep" data-category="dining" onclick="openLightbox(1)">
+                    <img src="images/dining-bar-1.jpg" alt="Granite Breakfast Bar & Houndstooth Stools" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x450/1B3B2B/FAF9F6?text=images/dining-bar-1.jpg';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <div>
+                            <span class="text-[10px] uppercase tracking-widest text-gold-light block">Dining & Kitchen</span>
+                            <p class="text-white text-sm font-medium">Granite Counter & Houndstooth Seating</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3: modern-lounge-blue.jpg -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer aspect-[4/3] bg-emerald-deep" data-category="lounges" onclick="openLightbox(2)">
+                    <img src="images/modern-lounge-blue.jpg" alt="Navy Blue Channel-Tufted Sectional Lounge" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x450/1E293B/FAF9F6?text=images/modern-lounge-blue.jpg';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <div>
+                            <span class="text-[10px] uppercase tracking-widest text-gold-light block">Executive Lounge</span>
+                            <p class="text-white text-sm font-medium">Sapphire Velvet Sectional Suite</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4: bedroom-bunk.jpg -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer aspect-[4/3] bg-emerald-deep" data-category="rooms" onclick="openLightbox(3)">
+                    <img src="images/bedroom-bunk.jpg" alt="Family & Twin Bunk Bedroom with White Linens" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x450/2C5440/FAF9F6?text=images/bedroom-bunk.jpg';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <div>
+                            <span class="text-[10px] uppercase tracking-widest text-gold-light block">Bedrooms</span>
+                            <p class="text-white text-sm font-medium">Crisp White Linen Twin Room</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5: living-room-wide.jpg -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer aspect-[4/3] bg-emerald-deep" data-category="lounges" onclick="openLightbox(4)">
+                    <img src="images/living-room-wide.jpg" alt="Wide Angle Open Plan Living & Dining View" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x450/1B3B2B/FAF9F6?text=images/living-room-wide.jpg';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <div>
+                            <span class="text-[10px] uppercase tracking-widest text-gold-light block">Open-Plan Living</span>
+                            <p class="text-white text-sm font-medium">Lounge & Dining Flow</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6: dining-bar-2.jpg -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer aspect-[4/3] bg-emerald-deep" data-category="dining" onclick="openLightbox(5)">
+                    <img src="images/dining-bar-2.jpg" alt="Gold-Rimmed Place Setting on Black Granite" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x450/142C20/FAF9F6?text=images/dining-bar-2.jpg';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <div>
+                            <span class="text-[10px] uppercase tracking-widest text-gold-light block">Tableware & Dining</span>
+                            <p class="text-white text-sm font-medium">Breakfast Bar Place Settings</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7: exterior-gate.jpg -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer aspect-[4/3] bg-emerald-deep" data-category="rooms" onclick="openLightbox(6)">
+                    <img src="images/exterior-gate.jpg" alt="Gated Private Entrance & Leafy Kakamega Road" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x450/1B3B2B/FAF9F6?text=images/exterior-gate.jpg';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <div>
+                            <span class="text-[10px] uppercase tracking-widest text-gold-light block">Compound & Security</span>
+                            <p class="text-white text-sm font-medium">Private Gated Entrance</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8: location-map.jpg -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md cursor-pointer aspect-[4/3] bg-emerald-deep" data-category="rooms" onclick="openLightbox(7)">
+                    <img src="images/location-map.jpg" alt="Google Maps Pin of The White House Kakamega" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x450/2C5440/FAF9F6?text=images/location-map.jpg';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <div>
+                            <span class="text-[10px] uppercase tracking-widest text-gold-light block">Neighborhood Map</span>
+                            <p class="text-white text-sm font-medium">Amalemba / Kakamega Pin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LOCATION, DIRECTIONS & BOOKING ==================== -->
+    <section id="location" class="py-20 lg:py-28 bg-alabaster">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left Column: Location Details & Map Reference (Image 8: location-map.jpg) -->
+                <div class="lg:col-span-6 reveal">
+                    <span class="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark block mb-3">Find Us in Kakamega</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-semibold text-emerald-deep mb-4">
+                        Location & Directions
+                    </h2>
+                    <p class="text-charcoal/75 text-base leading-relaxed mb-6">
+                        Conveniently positioned in the quiet Amalemba neighborhood just off Kisumu-Kakamega Road (Plus Code: <strong>7Q76+M22, Kakamega</strong>), offering quick connections to town landmarks while remaining shielded from main-road noise.
+                    </p>
+
+                    <!-- Interactive Map + Uploaded Pin Card -->
+                    <div class="rounded-3xl overflow-hidden shadow-xl border border-gold-warm/25 bg-white mb-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-12">
+                            <!-- User's Uploaded Google Maps Pin Preview -->
+                            <div class="sm:col-span-5 relative min-h-[240px] bg-sandstone cursor-pointer group" onclick="openLightbox(7)">
+                                <img 
+                                    src="images/location-map.jpg" 
+                                    alt="The White House Kakamega Map Pin" 
+                                    class="w-full h-full object-cover"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/500x600/1B3B2B/FAF9F6?text=images/location-map.jpg+(Map+Pin)';"
+                                >
+                                <div class="absolute bottom-3 left-3 right-3 bg-emerald-deep/90 backdrop-blur-md text-white text-[11px] px-3 py-1.5 rounded-xl text-center font-medium">
+                                    Tap to enlarge pin guide
+                                </div>
+                            </div>
+
+                            <!-- Live Google Maps Embed for Kakamega -->
+                            <div class="sm:col-span-7 min-h-[260px]">
+                                <iframe 
+                                    title="The White House Kakamega Map"
+                                    src="https://www.google.com/maps?q=The+White+House+Kakamega,+Kakamega,+Kenya&output=embed" 
+                                    class="w-full h-full min-h-[260px] border-0" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </div>
+
+                        <div class="p-5 bg-sandstone/60 border-t border-gold-warm/15 flex flex-wrap items-center justify-between gap-4">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-wider text-emerald-deep">Address & Landmark</p>
+                                <p class="text-sm text-charcoal/80">Amalemba, Off Kisumu-Kakamega Rd, Kakamega</p>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=The+White+House+Kakamega+Kenya" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-emerald-deep text-white text-xs font-semibold hover:bg-emerald-rich transition-colors inline-flex items-center gap-2">
+                                <span>Open in Google Maps</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Direct Contact Strip -->
+                    <div class="p-5 rounded-2xl bg-emerald-deep text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-widest text-gold-light block">24/7 Reservations & Host Desk</span>
+                            <a href="tel:+254711112481" class="font-serif text-2xl font-bold hover:text-gold-light transition-colors">+254 711 112 481</a>
+                        </div>
+                        <button onclick="copyPhoneNumber()" id="copy-phone-btn" class="px-4 py-2 rounded-full bg-white/15 hover:bg-white/25 text-xs font-semibold transition-colors">
+                            Copy Number
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Detailed Reservation & WhatsApp Inquiry Form -->
+                <div id="booking-section" class="lg:col-span-6 reveal">
+                    <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-2xl border border-gold-warm/25">
+                        <span class="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark block mb-2">Direct Booking</span>
+                        <h3 class="font-serif text-3xl sm:text-4xl font-semibold text-emerald-deep mb-2">
+                            Reserve Your Stay
+                        </h3>
+                        <p class="text-sm text-charcoal/70 mb-6">
+                            Complete your stay preferences below to send an instant reservation inquiry directly to our Kakamega host on WhatsApp (<strong>0711 112 481</strong>).
+                        </p>
+
+                        <form id="full-booking-form" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-charcoal mb-1.5">Full Name *</label>
+                                    <input type="text" id="guest-name" required placeholder="e.g. Wanjiku / Brian Ochieng" class="w-full px-4 py-3 rounded-2xl bg-alabaster border border-charcoal/15 text-sm focus:outline-none focus:border-emerald-deep">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-charcoal mb-1.5">Phone / WhatsApp *</label>
+                                    <input type="tel" id="guest-phone" required placeholder="e.g. 0712 345 678" class="w-full px-4 py-3 rounded-2xl bg-alabaster border border-charcoal/15 text-sm focus:outline-none focus:border-emerald-deep">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-charcoal mb-1.5">Check-In Date *</label>
+                                    <input type="date" id="book-checkin" required class="w-full px-4 py-3 rounded-2xl bg-alabaster border border-charcoal/15 text-sm focus:outline-none focus:border-emerald-deep">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-charcoal mb-1.5">Check-Out Date *</label>
+                                    <input type="date" id="book-checkout" required class="w-full px-4 py-3 rounded-2xl bg-alabaster border border-charcoal/15 text-sm focus:outline-none focus:border-emerald-deep">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-charcoal mb-1.5">Preferred Suite / Package</label>
+                                    <select id="book-suite" class="w-full px-4 py-3 rounded-2xl bg-alabaster border border-charcoal/15 text-sm focus:outline-none focus:border-emerald-deep">
+                                        <option value="Heritage Timber Lounge & Suite">Heritage Timber Lounge & Suite</option>
+                                        <option value="Sapphire Velvet Executive Suite">Sapphire Velvet Executive Suite</option>
+                                        <option value="Family / Twin Bunk Suite">Family / Twin Bunk Suite</option>
+                                        <option value="Entire Private Guesthouse">Entire Private Guesthouse</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-charcoal mb-1.5">Number of Guests</label>
+                                    <select id="book-guests" class="w-full px-4 py-3 rounded-2xl bg-alabaster border border-charcoal/15 text-sm focus:outline-none focus:border-emerald-deep">
+                                        <option value="1 Guest">1 Guest</option>
+                                        <option value="2 Guests" selected>2 Guests</option>
+                                        <option value="3 - 4 Guests">3 - 4 Guests</option>
+                                        <option value="5+ Guests (Group / Family)">5+ Guests (Group / Family)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-charcoal mb-1.5">Special Requests (Arrival time, airport pickup, etc.)</label>
+                                <textarea id="book-notes" rows="3" placeholder="Let us know your estimated arrival time or any special arrangements..." class="w-full px-4 py-3 rounded-2xl bg-alabaster border border-charcoal/15 text-sm focus:outline-none focus:border-emerald-deep"></textarea>
+                            </div>
+
+                            <!-- Inline Status Message Box (No alert() used) -->
+                            <div id="booking-feedback" class="hidden p-4 rounded-2xl bg-emerald-deep/10 border border-emerald-deep/20 text-emerald-deep text-xs font-medium"></div>
+
+                            <button type="submit" class="w-full py-4 px-6 rounded-2xl bg-emerald-deep hover:bg-emerald-rich text-white font-semibold text-sm tracking-wide shadow-xl transition-all flex items-center justify-center gap-2.5">
+                                <svg class="w-5 h-5 text-gold-light" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+                                </svg>
+                                <span>Send Reservation via WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-emerald-rich text-alabaster/80 pt-16 pb-10 border-t border-gold-warm/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-white/10">
+                <div>
+                    <span class="font-serif text-2xl font-bold text-white block">The White House Kakamega</span>
+                    <span class="text-xs uppercase tracking-[0.25em] text-gold-light block mt-1 mb-4">Boutique Resort & Guesthouse</span>
+                    <p class="text-sm text-alabaster/70 leading-relaxed">
+                        A peaceful, gated boutique retreat in Amalemba, Kakamega—offering warm luxury, privacy, and authentic Kenyan hospitality.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-semibold text-white mb-4">Quick Navigation</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#about" class="hover:text-gold-light transition-colors">About the Retreat</a></li>
+                        <li><a href="#suites" class="hover:text-gold-light transition-colors">Suites & Living Lounges</a></li>
+                        <li><a href="#dining" class="hover:text-gold-light transition-colors">Dining Bar & Kitchen</a></li>
+                        <li><a href="#gallery" class="hover:text-gold-light transition-colors">Photo Gallery</a></li>
+                        <li><a href="#location" class="hover:text-gold-light transition-colors">Location & Directions</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-semibold text-white mb-4">Contact & Location</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li>Amalemba / Off Kisumu-Kakamega Road</li>
+                        <li>Kakamega County, Western Kenya</li>
+                        <li>Phone / WhatsApp: <a href="tel:+254711112481" class="text-gold-light font-semibold hover:underline">+254 711 112 481</a></li>
+                        <li>Check-in: 2:00 PM • Check-out: 11:00 AM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-alabaster/50">
+                <p>&copy; <span id="current-year"></span> The White House Kakamega. All rights reserved.</p>
+                <p>Kakamega, Kenya • Direct Reservations: 0711 112 481</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+    <a href="https://wa.me/254711112481?text=Hello%20The%20White%20House%20Kakamega!%20I%20would%20like%20to%20inquire%20about%20room%20availability%20and%20rates." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Chat on WhatsApp"
+       class="fixed bottom-6 right-6 z-40 flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1ebe5d] text-white px-5 py-3.5 rounded-full shadow-2xl hover:scale-105 transition-all">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+        </svg>
+        <span class="text-xs font-bold tracking-wide hidden sm:inline">Chat with Host</span>
+    </a>
+
+    <!-- ==================== FULLSCREEN LIGHTBOX MODAL ==================== -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-lg flex items-center justify-center p-4">
+        <button onclick="closeLightbox()" aria-label="Close Lightbox" class="absolute top-5 right-5 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <button onclick="navigateLightbox(-1)" aria-label="Previous Image" class="absolute left-3 sm:left-8 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+
+        <div class="max-w-4xl w-full text-center">
+            <img id="lightbox-img" src="" alt="Gallery Preview" class="max-h-[75vh] mx-auto rounded-2xl shadow-2xl object-contain">
+            <p id="lightbox-caption" class="text-white font-serif text-xl mt-4"></p>
+            <p id="lightbox-sub" class="text-gold-light text-xs uppercase tracking-widest mt-1"></p>
+        </div>
+
+        <button onclick="navigateLightbox(1)" aria-label="Next Image" class="absolute right-3 sm:right-8 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- ==================== JAVASCRIPT INTERACTIVITY ==================== -->
+    <script>
+        // Set dynamic footer year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Set default check-in (tomorrow) and check-out (day after) dates
+        (function setDefaultDates() {
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(today.getDate() + 1);
+            const dayAfter = new Date(today);
+            dayAfter.setDate(today.getDate() + 2);
+
+            const formatDate = (d) => d.toISOString().split('T')[0];
+
+            ['hero-checkin', 'book-checkin'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.min = formatDate(today);
+                    el.value = formatDate(tomorrow);
+                }
+            });
+
+            ['hero-checkout', 'book-checkout'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.min = formatDate(tomorrow);
+                    el.value = formatDate(dayAfter);
+                }
+            });
+        })();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+            iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) toggleMobileMenu();
+            });
+        });
+
+        // Smooth scroll to booking form and pre-select suite
+        function scrollToBooking(suiteName) {
+            const suiteSelect = document.getElementById('book-suite');
+            if (suiteSelect && suiteName) {
+                for (let option of suiteSelect.options) {
+                    if (option.value.toLowerCase().includes(suiteName.toLowerCase().split(' ')[0])) {
+                        suiteSelect.value = option.value;
+                        break;
+                    }
+                }
+            }
+            document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Copy Phone Number using execCommand fallback (iframe-safe)
+        function copyPhoneNumber() {
+            const tempInput = document.createElement('input');
+            tempInput.value = '+254711112481';
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            const btn = document.getElementById('copy-phone-btn');
+            const originalText = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => { btn.textContent = originalText; }, 2000);
+        }
+
+        // Hero Quick-Book Form Submission -> WhatsApp
+        document.getElementById('hero-quick-book').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const checkin = document.getElementById('hero-checkin').value;
+            const checkout = document.getElementById('hero-checkout').value;
+            const room = document.getElementById('hero-room').value;
+
+            const message = `Hello The White House Kakamega! I'd like to check availability:\n• Accommodation: ${room}\n• Check-in: ${checkin}\n• Check-out: ${checkout}\nPlease share rates and availability.`;
+            window.open(`https://wa.me/254711112481?text=${encodeURIComponent(message)}`, '_blank');
+        });
+
+        // Full Booking Form Submission -> WhatsApp + Inline Feedback
+        document.getElementById('full-booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('guest-name').value.trim();
+            const phone = document.getElementById('guest-phone').value.trim();
+            const checkin = document.getElementById('book-checkin').value;
+            const checkout = document.getElementById('book-checkout').value;
+            const suite = document.getElementById('book-suite').value;
+            const guests = document.getElementById('book-guests').value;
+            const notes = document.getElementById('book-notes').value.trim();
+
+            const feedback = document.getElementById('booking-feedback');
+            feedback.textContent = `Thank you, ${name}! Opening WhatsApp to send your reservation request for ${suite} (${checkin} to ${checkout}) to +254 711 112 481...`;
+            feedback.classList.remove('hidden');
+
+            const message = `Hello The White House Kakamega! New Reservation Inquiry:\n• Guest Name: ${name}\n• Contact: ${phone}\n• Suite/Package: ${suite}\n• Guests: ${guests}\n• Check-in: ${checkin}\n• Check-out: ${checkout}${notes ? `\n• Special Requests: ${notes}` : ''}`;
+
+            window.open(`https://wa.me/254711112481?text=${encodeURIComponent(message)}`, '_blank');
+        });
+
+        // Gallery Category Filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-emerald-deep', 'text-white');
+                    b.classList.add('bg-white', 'text-charcoal');
+                });
+                btn.classList.remove('bg-white', 'text-charcoal');
+                btn.classList.add('bg-emerald-deep', 'text-white');
+
+                const filter = btn.getAttribute('data-filter');
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Lightbox Data matching the 8 exact filenames
+        const galleryData = [
+            { src: 'images/hero-lounge.jpg', title: 'Timber-Ceiling Main Lounge', sub: 'images/hero-lounge.jpg • Living Lounges' },
+            { src: 'images/dining-bar-1.jpg', title: 'Granite Counter & Houndstooth Seating', sub: 'images/dining-bar-1.jpg • Dining & Kitchen' },
+            { src: 'images/modern-lounge-blue.jpg', title: 'Sapphire Velvet Sectional Lounge', sub: 'images/modern-lounge-blue.jpg • Executive Wing' },
+            { src: 'images/bedroom-bunk.jpg', title: 'Crisp White Linen Twin & Family Bedroom', sub: 'images/bedroom-bunk.jpg • Bedrooms' },
+            { src: 'images/living-room-wide.jpg', title: 'Open-Plan Living & Dining Flow', sub: 'images/living-room-wide.jpg • Living Lounges' },
+            { src: 'images/dining-bar-2.jpg', title: 'Gold-Rimmed Tableware & Breakfast Bar', sub: 'images/dining-bar-2.jpg • Dining & Kitchen' },
+            { src: 'images/exterior-gate.jpg', title: 'Private Gated Compound Entrance', sub: 'images/exterior-gate.jpg • Grounds & Security' },
+            { src: 'images/location-map.jpg', title: 'The White House Kakamega Location Pin', sub: 'images/location-map.jpg • Amalemba, Kakamega' }
+        ];
+
+        let currentLightboxIndex = 0;
+        const lightboxModal = document.getElementById('lightbox-modal');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxSub = document.getElementById('lightbox-sub');
+
+        function openLightbox(index) {
+            currentLightboxIndex = index;
+            updateLightboxContent();
+            lightboxModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightboxModal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function navigateLightbox(direction) {
+            currentLightboxIndex = (currentLightboxIndex + direction + galleryData.length) % galleryData.length;
+            updateLightboxContent();
+        }
+
+        function updateLightboxContent() {
+            const item = galleryData[currentLightboxIndex];
+            lightboxImg.onerror = function() {
+                this.onerror = null;
+                this.src = `https://placehold.co/1000x750/1B3B2B/FAF9F6?text=${encodeURIComponent(item.sub)}`;
+            };
+            lightboxImg.src = item.src;
+            lightboxCaption.textContent = item.title;
+            lightboxSub.textContent = item.sub;
+        }
+
+        // Keyboard navigation for Lightbox
+        document.addEventListener('keydown', (e) => {
+            if (lightboxModal.classList.contains('hidden')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') navigateLightbox(1);
+            if (e.key === 'ArrowLeft') navigateLightbox(-1);
+        });
+
+        // Scroll Reveal Intersection Observer
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.12 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
